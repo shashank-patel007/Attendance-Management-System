@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "982037142955",
+    "firebase_url": "https://attendance-manager-46ead.firebaseio.com",
+    "project_id": "attendance-manager-46ead",
+    "storage_bucket": "attendance-manager-46ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982037142955:android:4c730042c061bf28c586ee",
+        "android_client_info": {
+          "package_name": "com.shashank.attendancemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982037142955-0atkbloqs7e0e8q2ps01e2m5ojq5q7hc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdC8Ldz2txbhlyHBSfskC8DbwXUdRkH4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982037142955-0atkbloqs7e0e8q2ps01e2m5ojq5q7hc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
