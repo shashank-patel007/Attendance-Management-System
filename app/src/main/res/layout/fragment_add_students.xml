@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:apiKey="paste_generated_api_key_here"
+    android:background="@drawable/gradient1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="412dp"
+        android:layout_height="417dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="3dp"
+        android:padding="4dp"
+        android:scrollbars="vertical" />
+
+    <EditText
+        android:id="@+id/et_student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="113dp"
+        android:ems="10"
+        android:hint="Enter Name" />
+
+    <EditText
+        android:id="@+id/et_subject_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Enter Subject" />
+
+    <Button
+        android:id="@+id/btn_add_student_data"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="153dp"
+        android:background="@drawable/rounded_button"
+        android:text="Add"
+        android:gravity="center"
+        android:textColor="#ffff"
+        android:fontFamily="@font/andada" />
+
+</RelativeLayout>

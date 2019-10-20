@@ -9,32 +9,41 @@
     tools:context=".MainActivity">
 
 
-    <com.rey.material.widget.Button
-        app:rd_enable="true"
+    <Button
         android:id="@+id/btnLogin"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginTop="276dp"
         android:layout_marginEnd="162dp"
-        android:background="@color/Gray"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/andada"
+        android:gravity="center"
         android:text="Login"
+        android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rd_enable="true" />
 
     <com.rey.material.widget.EditText
-        app:et_labelEnable="true"
         android:id="@+id/etEmail"
         android:layout_width="150dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
-        android:background="@color/Gray"
+        android:background="@null"
+        android:backgroundTint="#00F7E2E2"
+        android:ems="10"
+        android:foregroundGravity="center"
         android:hint="Email"
+        android:fontFamily="@font/andada"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:inputType="textEmailAddress"
+        app:et_labelEnable="true"
         app:et_labelTextColor="@color/Blue"
         app:et_labelTextSize="10dp"
-        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -43,16 +52,20 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.rey.material.widget.EditText
-        app:et_labelEnable="true"
         android:id="@+id/etPassword"
         android:layout_width="150dp"
-        android:layout_height="35dp"
-        app:et_labelTextSize="10dp"
-        app:et_labelTextColor="@color/Blue"
+        android:layout_height="wrap_content"
         android:layout_marginTop="192dp"
-        android:background="@color/Gray"
+        android:background="@null"
+        android:ems="10"
+        android:foregroundGravity="center"
+        android:textStyle="normal"
         android:hint="Password"
+        android:fontFamily="@font/andada"
         android:inputType="textPassword"
+        android:textSize="18sp"
+        app:et_labelEnable="true"
+        app:et_labelTextColor="@color/Blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +85,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffff"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

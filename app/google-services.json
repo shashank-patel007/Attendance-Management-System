@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "982037142955-8cp03v8bu8qqievb0o0gk974heb5pjtm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shashank.attendancemanager",
+            "certificate_hash": "9b54b2f1da3b354ac0117ffc9ee69f1d13481661"
+          }
+        },
+        {
           "client_id": "982037142955-0atkbloqs7e0e8q2ps01e2m5ojq5q7hc.apps.googleusercontent.com",
           "client_type": 3
         }

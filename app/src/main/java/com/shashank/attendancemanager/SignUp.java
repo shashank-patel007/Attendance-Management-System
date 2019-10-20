@@ -21,11 +21,16 @@ public class SignUp extends AppCompatActivity {
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
+    private EditText addSubject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+       /* FragmentManager manager=getSupportFragmentManager();
+        FragmentTransaction t=manager.beginTransaction();
+        final FragmentAddStudents students =new FragmentAddStudents();
+        addSubject=findViewById(R.id.et_my_subject);*/
         setUpUIViews();
         firebaseAuth=FirebaseAuth.getInstance();
         regButton.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +44,9 @@ public class SignUp extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(SignUp.this,"Registration Successful!",Toast.LENGTH_SHORT).show();
+                               /* Bundle b=new Bundle();
+                                b.putString("subjectName",addSubject.getText().toString().trim());
+                                students.setArguments(b);*/
                                 startActivity(new Intent(SignUp.this,MainActivity.class));
                             }
                             else{
