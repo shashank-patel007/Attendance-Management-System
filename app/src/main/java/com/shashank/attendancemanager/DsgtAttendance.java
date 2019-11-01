@@ -59,7 +59,7 @@ public class DsgtAttendance extends AppCompatActivity {
                     String mLecturesAttended=students.child("mLecturesAttended").getValue(String.class);
                     String mTotalLectures=students.child("mTotalLectures").getValue(String.class);
                     String mAttendancePercent=students.child("mAttendancePercent").getValue(String.class);
-                    if(mName.contains("ADS")){
+                    /*if(mName.contains("ADS")){
                         String temp="ADS ";
                         mName=mName.replaceAll(temp,"");
                         temp=" ADS";
@@ -88,7 +88,7 @@ public class DsgtAttendance extends AppCompatActivity {
                         mName=mName.replaceAll(temp,"");
                         temp=" Maths";
                         mName=mName.replaceAll(temp,"");
-                    }
+                    }*/
                     StudentsData students1=new StudentsData(mName,mLecturesAttended,mTotalLectures,mAttendancePercent);
                     studentsDataList.add(students1);
                 }

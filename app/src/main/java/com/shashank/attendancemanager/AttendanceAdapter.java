@@ -14,8 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -59,7 +57,7 @@ public class AttendanceAdapter extends RecyclerView.Adapter<AttendanceAdapter.At
 
     @Override
     public void onBindViewHolder(@NonNull final AttendanceViewHolder holder, int position) {
-        YoYo.with(Techniques.FadeIn).playOn(holder.cardView);
+        //YoYo.with(Techniques.FadeIn).playOn(holder.cardView);
         student = studentsList.get(position);
         holder.lecturesAttended.setText(student.getmLecturesAttended());
         holder.totalLectures.setText(student.getmTotalLectures());
@@ -84,7 +82,8 @@ public class AttendanceAdapter extends RecyclerView.Adapter<AttendanceAdapter.At
                             for(DataSnapshot studentSnapshot : teacherSnapshot.getChildren()){
                                 String mName=studentSnapshot.child("mName").getValue(String.class);
                                 String mSubject=studentSnapshot.child("mSubject").getValue(String.class);
-                                if(mName.equals(student.getmName())){
+                                Log.d(TAG, "onDataChange: "+mName+" "+mSubject);
+                                if((mName).equals(student.getmName())){
                                     Log.d(TAG, "Names: "+student.getmName());
                                     studentSnapshot.child("mLecturesAttended").getRef().setValue(Integer.toString(count));
                                     studentSnapshot.child("mTotalLectures").getRef().setValue(Integer.toString(count2));
