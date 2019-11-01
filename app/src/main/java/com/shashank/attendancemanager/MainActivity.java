@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.rey.material.widget.EditText;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_TEXT="com.shashank.attendancemanager.EXTRA_TEXT";
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         Email=(EditText)findViewById(R.id.etEmail);
         Password=(EditText)findViewById(R.id.etPassword);
         Login=findViewById(R.id.btnLogin);

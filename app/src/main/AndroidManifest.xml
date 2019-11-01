@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdsAttendance"></activity>
+        <activity android:name=".MathsAttendance"></activity>
+        <activity android:name=".DldaAttendance" />
+        <activity android:name=".DsgtAttendance" />
+        <activity android:name=".OopAttendance" />
+        <activity android:name=".AdsAttendance" />
         <activity
             android:name=".Dashboard"
             android:theme="@style/AppTheme.NoActionBar" />

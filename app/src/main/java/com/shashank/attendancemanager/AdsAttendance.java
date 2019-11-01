@@ -1,17 +1,17 @@
 package com.shashank.attendancemanager;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.github.ybq.android.spinkit.style.FadingCircle;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class AdsAttendance extends AppCompatActivity {
+    private static final String TAG = "AdsAttendance";
     private RecyclerView recyclerView;
     private AttendanceAdapter mAdapter;
     ArrayList<StudentsData> studentsDataList=new ArrayList<>();
@@ -32,21 +33,25 @@ public class AdsAttendance extends AppCompatActivity {
     private TextView totalLectures;
     private TextView mStudentName;
     private TextView percentAttendance;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ads_attendance);
         recyclerView=findViewById(R.id.ads_recylerview);
+        progressBar=findViewById(R.id.spin_kit);
+        progressBar.setIndeterminateDrawable(new FadingCircle());
         /*recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         studentsDataList.add(new StudentsData("Shashank Patel","2","3","66%"));
         mAdapter=new AttendanceAdapter(this,studentsDataList);
         recyclerView.setAdapter(mAdapter);*/
         databaseReference= FirebaseDatabase.getInstance().getReference("teachers").child("ADS");
-        final ProgressDialog progressDialog=new ProgressDialog(AdsAttendance.this);
-        progressDialog.setMessage("Loading...");
-        progressDialog.show();
+        //final ProgressDialog progressDialog=new ProgressDialog(AdsAttendance.this);
+        /*progressDialog.setMessage("Loading...");
+        progressDialog.show();*/
+        progressBar.setVisibility(View.VISIBLE);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -56,6 +61,36 @@ public class AdsAttendance extends AppCompatActivity {
                     String mLecturesAttended=students.child("mLecturesAttended").getValue(String.class);
                     String mTotalLectures=students.child("mTotalLectures").getValue(String.class);
                     String mAttendancePercent=students.child("mAttendancePercent").getValue(String.class);
+                    if(mName.contains("ADS")){
+                        String temp="ADS ";
+                        mName=mName.replaceAll(temp,"");
+                        temp=" ADS";
+                        mName=mName.replaceAll(temp,"");
+                    }
+                    if(mName.contains("OOP")){
+                        String temp="OOP ";
+                        mName=mName.replaceAll(temp,"");
+                        temp=" OOP";
+                        mName=mName.replaceAll(temp,"");
+                    }
+                    if(mName.contains("DSGT")){
+                        String temp="DSGT ";
+                        mName=mName.replaceAll(temp,"");
+                        temp=" DSGT";
+                        mName=mName.replaceAll(temp,"");
+                    }
+                    if(mName.contains("DLDA")){
+                        String temp="DLDA ";
+                        mName=mName.replaceAll(temp,"");
+                        temp=" DLDA";
+                        mName=mName.replaceAll(temp,"");
+                    }
+                    if(mName.contains("Maths")){
+                        String temp="Maths ";
+                        mName=mName.replaceAll(temp,"");
+                        temp=" Maths";
+                        mName=mName.replaceAll(temp,"");
+                    }
                     StudentsData students1=new StudentsData(mName,mLecturesAttended,mTotalLectures,mAttendancePercent);
                     studentsDataList.add(students1);
                 }
@@ -63,8 +98,9 @@ public class AdsAttendance extends AppCompatActivity {
                 mLayoutManager=new LinearLayoutManager(AdsAttendance.this);
                 recyclerView.setLayoutManager(mLayoutManager);
                 recyclerView.setAdapter(mAdapter);
-                //mAdapter.notifyDataSetChanged();
-                progressDialog.dismiss();
+                mAdapter.notifyDataSetChanged();
+                //progressDialog.dismiss();
+                progressBar.setVisibility(View.INVISIBLE);
             }
 
             @Override

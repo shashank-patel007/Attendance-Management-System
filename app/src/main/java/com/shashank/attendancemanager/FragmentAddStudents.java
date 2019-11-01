@@ -142,6 +142,36 @@ public class FragmentAddStudents extends Fragment implements View.OnClickListene
                     for(DataSnapshot studentSnapshot : teacherSnapshot.getChildren()){
                         String mName=studentSnapshot.child("mName").getValue(String.class);
                         String mSubject=studentSnapshot.child("mSubject").getValue(String.class);
+                        if(mName.contains("ADS")){
+                            String temp="ADS ";
+                            mName=mName.replaceAll(temp,"");
+                            temp=" ADS";
+                            mName=mName.replaceAll(temp,"");
+                        }
+                        if(mName.contains("OOP")){
+                            String temp="OOP ";
+                            mName=mName.replaceAll(temp,"");
+                            temp=" OOP";
+                            mName=mName.replaceAll(temp,"");
+                        }
+                        if(mName.contains("DSGT")){
+                            String temp="DSGT ";
+                            mName=mName.replaceAll(temp,"");
+                            temp=" DSGT";
+                            mName=mName.replaceAll(temp,"");
+                        }
+                        if(mName.contains("DLDA")){
+                            String temp="DLDA ";
+                            mName=mName.replaceAll(temp,"");
+                            temp=" DLDA";
+                            mName=mName.replaceAll(temp,"");
+                        }
+                        if(mName.contains("Maths")){
+                            String temp="Maths ";
+                            mName=mName.replaceAll(temp,"");
+                            temp=" Maths";
+                            mName=mName.replaceAll(temp,"");
+                        }
                         StudentsData studentsData=new StudentsData(mName,mSubject);
                         sd.add(studentsData);
                     }
@@ -180,7 +210,7 @@ public class FragmentAddStudents extends Fragment implements View.OnClickListene
             Toast.makeText(getContext(),"You Should Enter All Details",Toast.LENGTH_SHORT).show();
         }
         else{
-            StudentsData studentsData=new StudentsData(etName,etSubject);
+            StudentsData studentsData=new StudentsData(etName+" "+etSubject,etSubject);
             databaseStudent= FirebaseDatabase.getInstance().getReference("teachers");
             mUser= FirebaseAuth.getInstance().getCurrentUser();
             String uniqueKey= FirebaseDatabase.getInstance().getReference().push().getKey();

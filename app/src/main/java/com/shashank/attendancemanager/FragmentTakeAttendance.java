@@ -36,11 +36,28 @@ public class FragmentTakeAttendance extends Fragment implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+        Intent intent;
         switch(view.getId()){
             case R.id.card_ads:
-                Intent intent = new Intent(getActivity(), AdsAttendance.class);
+                intent = new Intent(getActivity(), AdsAttendance.class);
                 startActivity(intent);
             break;
+            case R.id.card_oop:
+                intent = new Intent(getActivity(), OopAttendance.class);
+                startActivity(intent);
+                break;
+            case R.id.card_dsgt:
+                intent = new Intent(getActivity(), DsgtAttendance.class);
+                startActivity(intent);
+                break;
+            case R.id.card_dlda:
+                intent = new Intent(getActivity(), DldaAttendance.class);
+                startActivity(intent);
+                break;
+            case R.id.card_maths:
+                intent = new Intent(getActivity(), MathsAttendance.class);
+                startActivity(intent);
+                break;
         }
 
     }

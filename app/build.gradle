@@ -49,5 +49,12 @@ dependencies {
     implementation 'androidx.mediarouter:mediarouter:1.1.0'
     implementation 'de.hdodenhof:circleimageview:2.0.0'
     implementation "com.google.android.gms:play-services-base:16.1.0"
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.victor:lib:1.0.4'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    releaseImplementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
 }
 apply plugin: 'com.google.gms.google-services'

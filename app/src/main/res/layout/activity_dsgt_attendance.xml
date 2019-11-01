@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DsgtAttendance"
+    android:background="@drawable/gradient1">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dsgt_recylerview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="10dp"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        app:cardUseCompatPadding="true">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.ChasingDots"
+        android:layout_width="100dp"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="306dp"
+        app:SpinKit_Color="@color/Black" />
+
+</RelativeLayout>
