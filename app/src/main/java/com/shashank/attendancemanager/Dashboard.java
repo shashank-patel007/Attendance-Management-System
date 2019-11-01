@@ -74,9 +74,9 @@ private DrawerLayout drawer;
             case R.id.nav_take_attendance:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentTakeAttendance()).commit();
                 break;
-            case R.id.nav_edit:
+           /* case R.id.nav_edit:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentEdit()).commit();
-                break;
+                break;*/
             case R.id.nav_sign_out:
                 FirebaseAuth.getInstance().signOut();
                 finish();

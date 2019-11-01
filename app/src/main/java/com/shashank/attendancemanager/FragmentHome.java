@@ -19,11 +19,11 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home,container,false);
         attendance=view.findViewById(R.id.card_attendance);
-        edit=view.findViewById(R.id.card_edit);
+        //edit=view.findViewById(R.id.card_edit);
         students=view.findViewById(R.id.card_add_students);
         settings=view.findViewById(R.id.card_settings);
         attendance.setOnClickListener(this);
-        edit.setOnClickListener(this);
+        //edit.setOnClickListener(this);
         students.setOnClickListener(this);
         settings.setOnClickListener(this);
         return view;
@@ -37,11 +37,11 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
                 transaction.replace(R.id.fragment_container,new FragmentTakeAttendance() );
                 transaction.commit();
                 break;
-            case R.id.card_edit:
+           /* case R.id.card_edit:
                // FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment_container,new FragmentEdit() );
                 transaction.commit();
-                break;
+                break;*/
             case R.id.card_settings:
                 transaction.replace(R.id.fragment_container,new FragmentSettings() );
                 transaction.commit();

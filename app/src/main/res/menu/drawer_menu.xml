@@ -21,10 +21,10 @@
                 android:title="Add Students"/>
          <!--   <item android:id="@+id/nav_add_subjects"
                 android:title="Add Subjects"
-                android:icon="@drawable/ic_classes"/>-->
+                android:icon="@drawable/ic_classes"/>
             <item android:id="@+id/nav_edit"
                 android:title="Edit"
-                android:icon="@drawable/ic_edit"/>
+                android:icon="@drawable/ic_edit"/>-->
         </menu>
     </item>
     <item android:title="Settings">

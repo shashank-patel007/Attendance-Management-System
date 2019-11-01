@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Change Password"
+        android:fontFamily="@font/andada"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.434"
